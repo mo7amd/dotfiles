@@ -161,4 +161,4 @@ zstyle ':omz:module:tmux' auto-start 'yes'
 
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux -CC; fi

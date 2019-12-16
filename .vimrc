@@ -125,6 +125,10 @@ set wildmenu                   " Enable enhanced command-line
 
 set winminheight=0             " Allow windows to be squashed
 
+set termguicolors
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
+
 " Quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -146,17 +150,13 @@ function! <SID>SynStack()
 endfunc
 
 syntax enable
-set background=dark
-let g:codedark_term256=1
-colorscheme dark_plus
-
-let g:indentLine_setColors = 0
-let g:indentLine_color_term = 255
+colorscheme monokai
 
 let g:indentLine_conceallevel = 1
+let g:solarized_termcolors=256
 
 nnoremap <C-p> :FZF<Cr>
-nnoremap <C-f> :Rg<Cr>
+nnoremap <D-f> :Rg<Cr>
 
 " UltiSnips triggering
 let g:UltiSnipsExpandTrigger = '<C-j>'
@@ -165,3 +165,9 @@ imap <c-r> <plug>(fzf-complete-path-relative)
 
 nnoremap ¬ gt
 nnoremap ˙ gT
+nmap <F3> :NERDTreeToggle<CR>
+
+let g:ale_fixers = {}
+let g:ale_fixers.javascript = ['eslint']
+let g:ale_fix_on_save = 1
+set mouse=a

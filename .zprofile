@@ -139,7 +139,7 @@ alias devdown="dockerdown && pm2down"
 alias nextup="rtncom_next && run dev"
 alias killStunnel="sudo kill -9 $(ps aux | grep stunnel | grep -v grep | awk '{print $2}')"
 alias rtnStunnel="stunnel /usr/local/etc/stunnel/stunnel-rtn.conf"
-alias clearRedis="docker exec -it rtn_session redis-cli FLUSHALL"
+alias clearRedis="docker exec -it rtn_cache redis-cli FLUSHALL"
 alias devCheck="docker ps && pm2 list"
 alias mdump="mongodump --host 107.170.212.115 --username rtn07 --password yHn789#_We. --authenticationDatabase admin --db rtn  --gzip -o qa --collection"
 alias mrestore="mongorestore --db rtn --dir qa/rtn/ --drop --gzip"
@@ -157,8 +157,8 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O 
 
 zstyle ':omz:module:tmux' auto-start 'yes'
 
-
-
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# if [ "$TMUX" = "" ]; then tmux -CC; fi
+if [ -x /usr/libexec/path_helper ]; then
+	PATH=""
+	eval `/usr/libexec/path_helper -s`
+fi

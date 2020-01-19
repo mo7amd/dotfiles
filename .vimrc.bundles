@@ -76,8 +76,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'justinj/vim-react-snippets' 
 
 " [9] Pretty format for our code
-Plugin 'gigo6000/vim-prettier'
-Plugin 'dense-analysis/ale'
+" Plugin 'gigo6000/vim-prettier'
+" Plugin 'dense-analysis/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,7 +123,9 @@ let g:UltiSnipsEditSplit="vertical"
 " [9]
 " Enable vim-prettier to run in files without requiring the "@format" doc tag
 
-let g:prettier#autoformat = 0
-let g:prettier#config#tab_width = 4
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
+" let g:prettier#autoformat = 0
+" let g:prettier#config#tab_width = 4
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
+Plugin 'storyn26383/vim-vue'
+Plugin 'tomasiser/vim-code-dark'

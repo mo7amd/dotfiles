@@ -1,0 +1,48 @@
+Host 51.158.170.109
+  IdentityFile mo7amd
+
+HOST qa-www-docker-sql
+    HostName 104.236.149.29
+    IdentityFile /Users/mo7amd/.ssh/mo7amd
+    User root
+
+HOST qa-sites
+    HostName 142.93.24.228
+    IdentityFile /Users/mo7amd/.ssh/mo7amd
+    User root
+
+HOST qa-sites-1
+    HostName 165.227.58.173
+    IdentityFile /Users/mo7amd/.ssh/mo7amd
+    User root
+
+HOST qa-node-docker-services
+    HostName 107.170.251.221
+    IdentityFile /Users/mo7amd/.ssh/mo7amd
+    User root
+
+HOST staging-sites
+    HostName 178.128.183.178
+    IdentityFile /Users/mo7amd/.ssh/mo7amd
+    User root
+
+HOST staging-node-services
+    HostName 192.241.213.150
+    IdentityFile /Users/mo7amd/.ssh/mo7amd
+    User root
+HOST prod-node-services-1
+    HostName 192.241.202.119
+    IdentityFile /home/mo7amd/.ssh/id_rsa
+    User root
+HOST prod-node-services-2
+    HostName 162.243.131.183
+    IdentityFile /home/mo7amd/.ssh/id_rsa
+    User root
+HOST sentry-beta
+    HOSTNAME 167.99.173.118
+    IdentityFile /home/mo7amd/.ssh/id_rsa
+    User root
+HOST rtn-jump-server
+    HostName 162.243.136.86
+    IdentityFile /home/eslam/.ssh/id_rsa.pub
+    User root

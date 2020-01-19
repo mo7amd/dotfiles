@@ -44,5 +44,5 @@ HOST sentry-beta
     User root
 HOST rtn-jump-server
     HostName 162.243.136.86
-    IdentityFile /home/eslam/.ssh/id_rsa.pub
+    IdentityFile /home/mo7amd/.ssh/id_rsa
     User root

@@ -32,17 +32,21 @@ HOST staging-node-services
     User root
 HOST prod-node-services-1
     HostName 192.241.202.119
-    IdentityFile /home/mo7amd/.ssh/id_rsa
+    IdentityFile /Users/mo7amd/.ssh/id_rsa
     User root
 HOST prod-node-services-2
     HostName 162.243.131.183
-    IdentityFile /home/mo7amd/.ssh/id_rsa
+    IdentityFile /Users/mo7amd/.ssh/id_rsa
     User root
 HOST sentry-beta
     HOSTNAME 167.99.173.118
-    IdentityFile /home/mo7amd/.ssh/id_rsa
+    IdentityFile /Users/mo7amd/.ssh/id_rsa
     User root
 HOST rtn-jump-server
     HostName 162.243.136.86
-    IdentityFile /home/mo7amd/.ssh/id_rsa
+    IdentityFile /Users/mo7amd/.ssh/id_rsa
     User root
+HOST code-server
+    HOSTNAME 51.158.170.109
+    IdentityFile /Users/mo7amd/.ssh/mo7amd
+    User mo7amd

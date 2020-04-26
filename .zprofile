@@ -131,7 +131,7 @@ alias id="npm i -D"
 alias is="npm i -S"
 alias dockerup="docker-compose -f /Users/mo7amd/Documents/rubikal/RTN/rtn_docker_local/docker-compose.yml up -d"
 alias dockerdown="docker-compose -f /Users/mo7amd/Documents/rubikal/RTN/rtn_docker_local/docker-compose.yml down"
-alias gotoms="cd /Users/mo7amd/Documents/rubikal/rtn/rtn_micros"
+alias gotoms="cd /Users/mo7amd/Documents/rubikal/RTN/rtn_micros"
 alias pm2up="gotoms && pm2 start startup.json"
 alias pm2down="gotoms && pm2 delete all"
 alias devup="dockerup && pm2up"
@@ -141,7 +141,7 @@ alias killStunnel="sudo kill -9 $(ps aux | grep stunnel | grep -v grep | awk '{p
 alias rtnStunnel="stunnel /usr/local/etc/stunnel/stunnel-rtn.conf"
 alias clearRedis="docker exec -it rtn_cache redis-cli FLUSHALL"
 alias devCheck="docker ps && pm2 list"
-alias mdump="mongodump --host 107.170.212.115 --username rtn07 --password yHn789#_We. --authenticationDatabase admin --db rtn  --gzip -o qa --collection"
+alias mdump="mongodump --host 167.71.125.173 --username rtn07 --password yHn789#_We. --authenticationDatabase admin --db rtn  --gzip -o qa --collection"
 alias mrestore="mongorestore --db rtn --dir qa/rtn/ --drop --gzip"
 alias mcleanup="rm -rf qa"
 # Set CLICOLOR if you want Ansi Colors in iTerm2 
@@ -149,8 +149,11 @@ export CLICOLOR=1
 
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
+
+
+export NVM_DIR="/Users/mo7amd/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
@@ -162,3 +165,5 @@ if [ -x /usr/libexec/path_helper ]; then
 	PATH=""
 	eval `/usr/libexec/path_helper -s`
 fi
+
+bindkey -v
